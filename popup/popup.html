@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>GTA 6 Spoiler Blocker</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <img src="../icons/icon48.png" alt="" width="28" height="28" />
+      <div class="title">
+        <h1>GTA 6 Spoiler Blocker</h1>
+        <p id="status">Loading…</p>
+      </div>
+      <label class="switch" title="Turn blocking on or off">
+        <input type="checkbox" id="enabled" />
+        <span></span>
+      </label>
+    </header>
+
+    <section class="stats">
+      <div><strong id="pageCount">–</strong><span>blurred on this page</span></div>
+      <div><strong id="totalCount">0</strong><span>blurred all-time</span></div>
+    </section>
+
+    <section>
+      <h2>Sites</h2>
+      <label class="row"><span>X / Twitter</span><span class="switch small"><input type="checkbox" id="site-x" /><span></span></span></label>
+      <label class="row"><span>YouTube</span><span class="switch small"><input type="checkbox" id="site-youtube" /><span></span></span></label>
+    </section>
+
+    <section>
+      <label class="row">
+        <span>
+          Strict mode
+          <small>Also blocks “GTA”, “Rockstar”, “Lucia”. More false positives.</small>
+        </span>
+        <span class="switch small"><input type="checkbox" id="strict" /><span></span></span>
+      </label>
+    </section>
+
+    <section>
+      <h2>Keywords <small>one per line</small></h2>
+      <textarea id="keywords" rows="7" spellcheck="false"></textarea>
+      <div class="buttons">
+        <button id="reset" class="secondary">Reset to defaults</button>
+        <button id="save">Save</button>
+      </div>
+      <p id="saved" class="saved" hidden>Saved</p>
+    </section>
+
+    <script src="../src/matcher.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
